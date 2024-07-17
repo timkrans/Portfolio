@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.LoginController">
+   <children>
+      <VBox alignment="CENTER" prefHeight="720.0" prefWidth="1280.0">
+         <children>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="95.0" prefHeight="100.0" prefWidth="315.0">
+               <children>
+                  <ImageView id="logo" fitHeight="56.0" fitWidth="89.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resources/logo.png" />
+                     </image>
+                  </ImageView>
+                  <Label alignment="CENTER" text="LOGIN TO TRACKMD">
+                     <padding>
+                        <Insets left="20.0" />
+                     </padding>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox fx:id="signInHBox" alignment="CENTER" prefHeight="100.0" prefWidth="315.0">
+               <children>
+                  <VBox prefHeight="100.0" prefWidth="139.0">
+                     <children>
+                        <Label text="I am a:" />
+                        <RadioButton fx:id="nurseRadioBtn" contentDisplay="TEXT_ONLY" mnemonicParsing="false" text="Nurse" toggleGroup="$Iama">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="Iama" />
+                           </toggleGroup>
+                        </RadioButton>
+                        <RadioButton fx:id="doctorRadioBtn" contentDisplay="TEXT_ONLY" mnemonicParsing="false" text="Doctor" toggleGroup="$Iama" />
+                        <RadioButton fx:id="patientRadioBtn" contentDisplay="TEXT_ONLY" mnemonicParsing="false" text="Patient or Guardian" toggleGroup="$Iama" />
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" prefHeight="75.0" prefWidth="222.0">
+                     <children>
+                        <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <Label text="Username" />
+                              <TextField fx:id="username" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" layoutX="10.0" layoutY="35.0" prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <Label text="Password: " />
+                              <TextField fx:id="password" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <Button fx:id="signInBtn" mnemonicParsing="false" text="Sign In" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="315.0">
+               <children>
+                  <Label text="New to TrackMD?" />
+                  <Hyperlink fx:id="createAccountLink" text="Create an account" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

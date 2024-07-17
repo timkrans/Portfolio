@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.NurseEntrancePortalController">
+   <children>
+      <HBox layoutX="557.0" layoutY="89.0">
+         <children>
+            <Label text="Welcome, ">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="patientNameLabel" text="Nurse ">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <Button fx:id="viewMessagesBtn" layoutX="784.0" layoutY="236.0" mnemonicParsing="false" text="View Messages" />
+      <Button fx:id="newPatientBtn" layoutX="603.0" layoutY="238.0" mnemonicParsing="false" text="New Patient" />
+      <Button fx:id="logOutBtn" layoutX="1156.0" layoutY="45.0" mnemonicParsing="false" text="Log Out" />
+      <ImageView fitHeight="64.0" fitWidth="105.0" layoutX="32.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../resources/logo.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="existingPatientBtn" layoutX="395.0" layoutY="236.0" mnemonicParsing="false" text="Existing Patient" />
+   </children>
+</AnchorPane>

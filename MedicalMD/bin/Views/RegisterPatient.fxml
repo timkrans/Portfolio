@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.RegisterPatientController">
+   <children>
+      <Group layoutX="560.0" layoutY="244.0">
+         <children>
+            <HBox alignment="CENTER" layoutX="5.0" layoutY="209.0">
+               <children>
+                  <Label  fx:id="errorLabel" text="Patient already registered?" />
+                  <Hyperlink fx:id="findPatientLink" text="Find patient" />
+               </children>
+            </HBox>
+            <Button fx:id="registerBtn" layoutX="40.0" layoutY="177.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="70.0" text="Register" />
+            <Label layoutX="1.0" text="Register New Patient:" />
+            <TextField fx:id="firstNameTF" layoutY="34.0" promptText="First Name" />
+            <TextField fx:id="lastNameTF" layoutX="1.0" layoutY="78.0" promptText="Last Name" />
+            <DatePicker fx:id="dateOfBirth" layoutY="128.0" prefHeight="25.0" prefWidth="151.0" promptText="Birthdate" />
+         </children>
+      </Group>
+      <Button fx:id="logOutBtn" layoutX="1156.0" layoutY="45.0" mnemonicParsing="false" text="Log Out" />
+      <ImageView fitHeight="64.0" fitWidth="105.0" layoutX="32.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../resources/logo.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="531.0" layoutY="91.0" text="REGISTER NEW PATIENT PORTAL (Nurse View)" />
+   </children>
+</AnchorPane>
